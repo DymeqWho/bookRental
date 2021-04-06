@@ -15,6 +15,9 @@ public class Book {
         this.isRented = isRented;
     }
 
+    public Book() {
+    }
+
     public int getId() {
         return id;
     }

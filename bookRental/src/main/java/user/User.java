@@ -23,6 +23,8 @@ public class User {
         this.status = status;
     }
 
+    public User() {
+    }
 
     public int getId() {
         return id;
