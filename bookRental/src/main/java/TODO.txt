@@ -1,0 +1,33 @@
+1 baza danych userów
+2 baza danych książek
+3 sewis do połączenia książki z userem
+
+1.1 klas user
+A) ID int
+B) name String
+C) list of rented books List<Book>
+D) Status boolean
+
+1.2 repo user (tworzenie i dodawanie usera do repo)
+
+2.1 klasa book
+A) ID
+B) title
+C) author
+D) type
+E) status is rented y/n
+
+
+2.2 repo book
+
+3.1 logika app - przyporządkowania książek do userów
+3.2 tworzenie usera
+3.3 tworzenie książki
+
+4 Konsolowe menu
+4.1 stwórz usera
+4.2 Dodaj książkę
+4.3 Zobacz dostępne książki - show all available books
+4.4 show all available users & their status
+4.5 add book to user
+4.6 show all rented books
