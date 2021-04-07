@@ -11,5 +11,11 @@ public class MainApp {
 
         createUser.createUser("Ktośtam");
         createUser.createUser("Ktoś 2");
+        createUser.createUser("Agata");
+        createUser.createUser("Michał");
+
+
     }
+
 }
+
