@@ -12,10 +12,6 @@ public class CreateUser {
 
         User user = new User();
 
-        user.setId(1);
-        user.setUsername(username);
-        user.setStatus(false);
-
         if (userRepo.getUserRepo().isEmpty()) {
             user.setId(1);
         } else {
