@@ -3,21 +3,19 @@ package service;
 import repository.UserRepo;
 import user.User;
 
-import java.util.Scanner;
-
 public class CreateUser {
     private UserRepo userRepo;
 
-    public void createUser(){
-        Scanner scanner = new Scanner(System.in);
-        User user = new User();
+    public void createUser(String username) {
 
-        user.setId(userRepo.getUserRepo().size() + 1);
-        user.setUsername(scanner.nextLine());
+        User user = new User(1, username, false);
+
+        user.setId(1);
+        user.setUsername(username);
         user.setStatus(false);
 
-        this.userRepo.getUserRepo().add(user);
+        System.out.println(user);
+
+
     }
-
-
-}
+    }

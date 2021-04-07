@@ -56,7 +56,15 @@ public class User {
 
     public void setBookList(List<Book> bookList) {
         this.bookList = bookList;
+    }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", status=" + status +
+                ", bookList=" + bookList +
+                '}';
     }
 }
