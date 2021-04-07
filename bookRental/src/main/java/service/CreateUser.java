@@ -3,24 +3,24 @@ package service;
 import repository.UserRepo;
 import user.User;
 
-import java.util.ArrayList;
+import java.util.List;
+
 
 public class CreateUser {
-    private final UserRepo userRepo = new UserRepo(new ArrayList<>());
+//    private UserRepo userRepo = new UserRepo();
 
-    public void createUser(String username) {
+    public User createUser(List<User> userList, String username) {
 
         User user = new User();
 
-        if (userRepo.getUserRepo().isEmpty()) {
+        if (userList.isEmpty()) {
             user.setId(1);
         } else {
-            user.setId(userRepo.getUserRepo().size() + 1);
+            user.setId(userList.size() + 1);
         }
         user.setUsername(username);
         user.setStatus(false);
-        userRepo.getUserRepo().add(user);
 
-        System.out.println(user);
+        return user;
     }
 }

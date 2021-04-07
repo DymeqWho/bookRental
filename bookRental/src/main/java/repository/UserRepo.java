@@ -6,14 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserRepo {
-    private List<User> userRepo = new ArrayList<>();
+    private final List<User> userRepoList = new ArrayList<>();
 
-    public UserRepo(List<User> userRepo) {
-        this.userRepo = userRepo;
+    public List<User> getUserRepoList() {
+        return userRepoList;
     }
 
-    public List<User> getUserRepo() {
-        return userRepo;
+    public void addUserToRepoList(User user){
+        userRepoList.add(user);
+    }
+
+    public User getUserById(int id){
+        return userRepoList.get(id);
     }
 
 }
