@@ -1,6 +1,6 @@
-package user;
+package dao.user;
 
-import book.Book;
+import dao.book.Book;
 
 import java.util.List;
 

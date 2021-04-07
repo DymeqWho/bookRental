@@ -1,6 +1,6 @@
 package repository;
 
-import user.User;
+import dao.user.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,12 @@ public class UserRepo {
         return userRepoList;
     }
 
-    public void addUserToRepoList(User user){
+    public void addUserToRepoList(User user) {
         userRepoList.add(user);
     }
 
-    public User getUserById(int id){
+    public User getUserById(int id) {
+        id -= 1;
         return userRepoList.get(id);
     }
 

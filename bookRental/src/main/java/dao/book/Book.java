@@ -1,4 +1,4 @@
-package book;
+package dao.book;
 
 public class Book {
     private int id;

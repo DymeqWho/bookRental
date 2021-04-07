@@ -1,13 +1,11 @@
 package service;
 
-import repository.UserRepo;
-import user.User;
+import dao.user.User;
 
 import java.util.List;
 
 
 public class CreateUser {
-//    private UserRepo userRepo = new UserRepo();
 
     public User createUser(List<User> userList, String username) {
 
