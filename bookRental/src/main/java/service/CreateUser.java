@@ -1,24 +1,32 @@
 package service;
 
 import dao.user.User;
+import repository.UserRepo;
 
-import java.util.List;
+import java.util.Scanner;
 
 
 public class CreateUser {
 
-    public User createUser(List<User> userList, String username) {
+    public void createUser(UserRepo userRepo) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Podaj imię użytkownika: ");
+        String username = scanner.nextLine();
 
         User user = new User();
 
-        if (userList.isEmpty()) {
+        if (userRepo.getUserRepoList().isEmpty()) {
             user.setId(1);
         } else {
-            user.setId(userList.size() + 1);
+            user.setId(userRepo.getUserRepoList().size() + 1);
         }
         user.setUsername(username);
         user.setStatus(false);
 
-        return user;
+        userRepo.addUserToRepoList(user);
+        System.out.println("Stworzyłeś: ");
+        System.out.println(userRepo.getUserById(user.getId()));
+        System.out.println();
+
     }
 }
