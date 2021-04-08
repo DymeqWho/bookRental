@@ -22,6 +22,8 @@ public class Menu {
         System.out.println(showUserListString);
         String editUserString = "3. Edytuj użytkownika";
         System.out.println(editUserString);
+        String endOfProgramString = "4. Zakończ program.";
+        System.out.println(endOfProgramString);
 
         int choiceInt = integerVerification.chooseInt("Którą opcję wybierasz?: ");
 
@@ -42,6 +44,10 @@ public class Menu {
             System.out.println(editUserString);
             editUser.editUserById(userRepo);
             showMenu();
+        }
+        if(choiceInt == 4){
+            System.out.println(endOfProgramString);
+            System.exit(0);
         }
     }
 }
