@@ -45,8 +45,12 @@ public class EditUser {
 
                 do {
                     int editChoice = integerVerification.chooseInt("Jaki jest Twój wybór?: ");
+                    if (editChoice == 1)
+                        System.out.print("Podaj nowe imię: ");
                     if (editChoice == 1) {
-                        System.out.println("Wpisz nowy username: " + scanner.nextLine());
+                        String newName = scanner.nextLine();
+                        user.setUsername(newName);
+                        System.out.println("Nowy username: " + newName);
                         break;
                     } else if (editChoice == 2) {
                         if (!user.isStatus()) {

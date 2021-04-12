@@ -24,5 +24,6 @@ public class IntegerVerification {
                 System.out.println("To nie jest numer! Podaj właściwy numer: ");
             }
         } while (true);
+
     }
 }

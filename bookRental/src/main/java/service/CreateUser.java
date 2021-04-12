@@ -27,6 +27,5 @@ public class CreateUser {
         System.out.println("Stworzyłeś: ");
         System.out.println(userRepo.getUserById(user.getId()));
         System.out.println();
-
     }
 }
